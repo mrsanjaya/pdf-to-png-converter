@@ -76,7 +76,7 @@ export async function pdfToPng(pdfFilePathOrBuffer: string | ArrayBufferLike, pr
             pageName = PDF_TO_PNG_OPTIONS_DEFAULTS.outputFileMask;
         }
         const pngPageOutput: PngPageOutput = {
-            name: `${pageName}_page_${pageNumber}.png`,
+            name: `${pageNumber}.png`,
             content: (canvasAndContext.canvas as Canvas).toBuffer(),
             path: '',
         };
